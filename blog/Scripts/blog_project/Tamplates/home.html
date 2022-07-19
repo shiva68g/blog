@@ -1,0 +1,38 @@
+{% extends 'header.html'%}
+{% load static %}
+{% block title %} Home {% endblock%}
+
+{% block content %}
+
+<style>
+    .home{
+        background: url("{% static 'img\about.jpg'%}");
+        min-height: 100%;
+        min-width: 1024px;
+          
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+          
+        /* Set up positioning */
+        position: fixed;
+        left: 0;
+    }
+</style>
+  <h1 class="text-center">PYTHON</h1>
+  <div class="home">
+    <div class="position-absolute top-50">
+     <p style=" font-size:35px; color:white; 
+       margin-left:50px; margin-top:-100px;">Hello Pogrammers</p>
+    <button class="btn btn-light" onclick="blog()" style="margin-left:50px;">click here</button>
+    </div>
+  </div>
+  <script>
+   let blog = ()=>{
+        let url = window.location.origin
+        window.location.replace(url+'/blogs');
+    }
+  </script>
+
+  
+{% endblock %}
